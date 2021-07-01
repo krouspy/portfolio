@@ -30,8 +30,8 @@ export const About = () => {
         </Flex>
         <Box color="white">
           <Text fontSize="lg" mb="5">
-            Hello! My name is Kenji and I'm from Tahiti, French Polynesia. Currently, I'm completing
-            my{' '}
+            Hello! My name is Kenji and I&apos;m from Tahiti, French Polynesia. Currently, I&apos;m
+            completing my{' '}
             <CustomLink
               href="https://www.esilv.fr/en/programmes/master-degree-engineering/"
               color={orange}

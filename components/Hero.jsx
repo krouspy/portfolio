@@ -13,13 +13,13 @@ export const Hero = () => {
           Kenji LAU
         </Heading>
         <Heading as="h2" fontSize="6xl" color="#A2A3C3" mb="3">
-          I'm Blockchain Developer.
+          I&apos;m Blockchain Developer.
         </Heading>
         <Text fontSize="larger" width="90%" color="#A2A3C3">
-          I'm a developer located in Paris with a high interest in cryptocurrencies and
+          I&apos;m a developer located in Paris with a high interest in cryptocurrencies and
           blockchain-based products.
           <br />
-          Currently, I'm working at Wakam, a french insurance company where we use
+          Currently, I&apos;m working at Wakam, a french insurance company where we use
         </Text>
         <Button
           variant="outline"

@@ -1,9 +1,7 @@
 import Image from 'next/image';
-import { Grid, HStack, Box, Center, Button, Text, Icon } from '@chakra-ui/react';
-import { FaReact, FaDesktop, FaGithub } from 'react-icons/fa';
+import { Grid, HStack, Box, Center, Text, Icon } from '@chakra-ui/react';
+import { FaReact } from 'react-icons/fa';
 import { SiNextDotJs, SiTypescript, SiMongodb, SiNodeDotJs } from 'react-icons/si';
-import { BsFillLightningFill } from 'react-icons/bs';
-import { BiCodeAlt, BiCodeCurly } from 'react-icons/bi';
 
 export const TechStack = () => {
   const color = '#1A202C';
@@ -87,7 +85,7 @@ const technologies = [
     id: 3,
     label: 'Solidity',
     icon: {
-      value: <Image src="/solidity.svg" width={128} height={128} />,
+      value: <Image src="/solidity.svg" alt="solidity" width={128} height={128} />,
       backgroundColor: '#354F5C',
     },
     description: 'Smart Contract',
@@ -97,7 +95,7 @@ const technologies = [
     id: 4,
     label: 'Hardhat',
     icon: {
-      value: <Image src="/hardhat.svg" width={32} height={32} />,
+      value: <Image src="/hardhat.svg" alt="hardhat" width={32} height={32} />,
       backgroundColor: '#354F5C',
     },
     description: 'Smart Contract',
@@ -107,7 +105,7 @@ const technologies = [
     id: 5,
     label: 'Truffle',
     icon: {
-      value: <Image src="/truffle.svg" width={32} height={32} />,
+      value: <Image src="/truffle.svg" alt="truffle" width={32} height={32} />,
       backgroundColor: '#354F5C',
     },
     description: 'Smart Contract',
@@ -127,7 +125,7 @@ const technologies = [
     id: 7,
     label: 'Express',
     icon: {
-      value: <Image src="/expressjs.svg" width={32} height={32} />,
+      value: <Image src="/expressjs.svg" alt="express" width={32} height={32} />,
       backgroundColor: '#354F5C',
     },
     description: 'Server',
@@ -145,29 +143,29 @@ const technologies = [
   },
 ];
 
-const categories = [
-  {
-    id: 0,
-    label: 'All',
-    category: 'all',
-    icon: <Icon as={BsFillLightningFill} boxSize={4} />,
-  },
-  {
-    id: 1,
-    label: 'Web',
-    category: 'web',
-    icon: <Icon as={FaDesktop} boxSize={4} />,
-  },
-  {
-    id: 2,
-    label: 'Smart Contract',
-    category: 'smart contract',
-    icon: <Icon as={BiCodeCurly} boxSize={4} />,
-  },
-  {
-    id: 3,
-    label: 'Languages',
-    category: 'languages',
-    icon: <Icon as={BiCodeAlt} boxSize={4} />,
-  },
-];
+// const categories = [
+//   {
+//     id: 0,
+//     label: 'All',
+//     category: 'all',
+//     icon: <Icon as={BsFillLightningFill} boxSize={4} />,
+//   },
+//   {
+//     id: 1,
+//     label: 'Web',
+//     category: 'web',
+//     icon: <Icon as={FaDesktop} boxSize={4} />,
+//   },
+//   {
+//     id: 2,
+//     label: 'Smart Contract',
+//     category: 'smart contract',
+//     icon: <Icon as={BiCodeCurly} boxSize={4} />,
+//   },
+//   {
+//     id: 3,
+//     label: 'Languages',
+//     category: 'languages',
+//     icon: <Icon as={BiCodeAlt} boxSize={4} />,
+//   },
+// ];
