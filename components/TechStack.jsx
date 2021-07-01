@@ -1,0 +1,173 @@
+import Image from 'next/image';
+import { Grid, HStack, Box, Center, Button, Text, Icon } from '@chakra-ui/react';
+import { FaReact, FaDesktop, FaGithub } from 'react-icons/fa';
+import { SiNextDotJs, SiTypescript, SiMongodb, SiNodeDotJs } from 'react-icons/si';
+import { BsFillLightningFill } from 'react-icons/bs';
+import { BiCodeAlt, BiCodeCurly } from 'react-icons/bi';
+
+export const TechStack = () => {
+  const color = '#1A202C';
+  return (
+    <Box p={5} shadow="md" width="50%" color="white">
+      <Center>
+        <Text fontSize="4xl">Tech Stack</Text>
+      </Center>
+      <Center mb="6">
+        <Text fontSize="xl">
+          A list of my favorite tools and technologies that I use on a regular basis.
+        </Text>
+      </Center>
+      {/* <Center mb="6">
+        <HStack spacing={6} align="center">
+          {categories.map(({ id, label, icon }) => (
+            <Button
+              key={id}
+              variant="ghost"
+              bg={color}
+              fontWeight="normal"
+              leftIcon={icon}
+              iconSpacing="5"
+              px="6"
+              py="0"
+            >
+              {label}
+            </Button>
+          ))}
+        </HStack>
+      </Center> */}
+      <Grid templateColumns="repeat(3, 3fr)" gap={5}>
+        {technologies.map(({ id, label, icon, description }) => (
+          <HStack key={id} w="100%" h="20" bg={color} px="4" borderRadius="10px">
+            <Center w="12" h="12" bg={icon.backgroundColor} borderRadius="10px">
+              {icon.value}
+            </Center>
+            <Box>
+              <Text>{label}</Text>
+              <Text fontSize="sm">{description}</Text>
+            </Box>
+          </HStack>
+        ))}
+      </Grid>
+    </Box>
+  );
+};
+
+const technologies = [
+  {
+    id: 0,
+    label: 'React',
+    icon: {
+      value: <Icon as={FaReact} color="#7BD0DF" boxSize={8} />,
+      backgroundColor: '#354F5C',
+    },
+    description: 'Web development',
+    category: 'web',
+  },
+  {
+    id: 1,
+    label: 'Nextjs',
+    icon: {
+      value: <Icon as={SiNextDotJs} boxSize={8} />,
+      backgroundColor: '#354F5C',
+    },
+    description: 'Web development',
+    category: 'web',
+  },
+  {
+    id: 2,
+    label: 'Typescript',
+    icon: {
+      value: <Icon as={SiTypescript} color="#3B86D8" boxSize={6} />,
+      backgroundColor: '#354F5C',
+    },
+    description: 'Programming Language',
+    category: 'web',
+  },
+  {
+    id: 3,
+    label: 'Solidity',
+    icon: {
+      value: <Image src="/solidity.svg" width={128} height={128} />,
+      backgroundColor: '#354F5C',
+    },
+    description: 'Smart Contract',
+    category: 'smart-contract',
+  },
+  {
+    id: 4,
+    label: 'Hardhat',
+    icon: {
+      value: <Image src="/hardhat.svg" width={32} height={32} />,
+      backgroundColor: '#354F5C',
+    },
+    description: 'Smart Contract',
+    category: 'smart-contract',
+  },
+  {
+    id: 5,
+    label: 'Truffle',
+    icon: {
+      value: <Image src="/truffle.svg" width={32} height={32} />,
+      backgroundColor: '#354F5C',
+    },
+    description: 'Smart Contract',
+    category: 'smart-contract',
+  },
+  {
+    id: 6,
+    label: 'Nodejs',
+    icon: {
+      value: <Icon as={SiNodeDotJs} color="#699E63" boxSize={6} />,
+      backgroundColor: '#354F5C',
+    },
+    description: 'Server',
+    category: 'web',
+  },
+  {
+    id: 7,
+    label: 'Express',
+    icon: {
+      value: <Image src="/expressjs.svg" width={32} height={32} />,
+      backgroundColor: '#354F5C',
+    },
+    description: 'Server',
+    category: 'web',
+  },
+  {
+    id: 8,
+    label: 'Mongo',
+    icon: {
+      value: <Icon as={SiMongodb} color="#11AB51" boxSize={8} />,
+      backgroundColor: '#354F5C',
+    },
+    description: 'Database',
+    category: 'web',
+  },
+];
+
+const categories = [
+  {
+    id: 0,
+    label: 'All',
+    category: 'all',
+    icon: <Icon as={BsFillLightningFill} boxSize={4} />,
+  },
+  {
+    id: 1,
+    label: 'Web',
+    category: 'web',
+    icon: <Icon as={FaDesktop} boxSize={4} />,
+  },
+  {
+    id: 2,
+    label: 'Smart Contract',
+    category: 'smart contract',
+    icon: <Icon as={BiCodeCurly} boxSize={4} />,
+  },
+  {
+    id: 3,
+    label: 'Languages',
+    category: 'languages',
+    icon: <Icon as={BiCodeAlt} boxSize={4} />,
+  },
+];
