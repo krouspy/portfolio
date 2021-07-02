@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import {
   Box,
   Flex,
@@ -9,7 +10,6 @@ import {
   Icon,
   Link,
   useColorModeValue,
-  useBreakpointValue,
   useDisclosure,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, ChevronDownIcon } from '@chakra-ui/icons';
@@ -55,13 +55,7 @@ export const Navbar = () => {
         </Flex>
 
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Text
-            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-            fontFamily="heading"
-            color={useColorModeValue('white', 'white')}
-          >
-            Logo
-          </Text>
+          <Image src="/logo.svg" alt="logo" width="48" height="48" />
         </Flex>
 
         <Stack flex={{ base: 1, md: 0 }} justify="flex-end" direction="row">
