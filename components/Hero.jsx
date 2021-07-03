@@ -13,13 +13,13 @@ export const Hero = () => {
           Kenji LAU
         </Heading>
         <Heading as="h2" fontSize="6xl" color="#A2A3C3" mb="3">
-          I&apos;m Blockchain Developer.
+          I&apos;m a Blockchain Developer.
         </Heading>
         <Text fontSize="larger" width="90%" color="#A2A3C3">
           I&apos;m a developer located in Paris with a high interest in cryptocurrencies and
           blockchain-based products.
-          <br />
-          Currently, I&apos;m working at Wakam, a french insurance company where we use
+          <br />I build things around Ethereum in React and Solidity and I&apos;m open to explore
+          other ecosystems.
         </Text>
         <Button
           variant="outline"
@@ -28,7 +28,7 @@ export const Hero = () => {
           mt="10"
           p="6"
           opacity={1}
-          _hover={{ bg: '#FFE9CC' }}
+          _hover={{ opacity: 1 }}
         >
           Get In Touch
         </Button>

@@ -13,6 +13,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, ChevronDownIcon } from '@chakra-ui/icons';
+import { CustomLink } from './CustomLink';
 
 const NAV_ITEMS = [
   {
@@ -77,30 +78,13 @@ const DesktopNav = () => {
       {NAV_ITEMS.map(({ id, text, href }) => {
         const index = `0${id}. `;
         return (
-          <Box key={id}>
-            <Link
-              p={2}
-              href={href}
-              fontSize="md"
-              color={orange}
-              style={{ whiteSpace: 'nowrap' }}
-              _hover={{
-                textDecoration: 'none',
-              }}
-            >
-              <span>{index}</span>
-              <Text
-                display="inline-block"
-                color="white"
-                _hover={{
-                  textDecoration: 'none',
-                  color: orange,
-                  transition: '0.4s',
-                }}
-              >
-                {text}
-              </Text>
-            </Link>
+          <Box key={id} whiteSpace="nowrap">
+            <Text p={2} color={orange} display="inline-block">
+              {index}
+            </Text>
+            <CustomLink href={href} color="white" fontSize="md">
+              {text}
+            </CustomLink>
           </Box>
         );
       })}

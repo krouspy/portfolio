@@ -1,37 +1,18 @@
-import Image from 'next/image';
-import { Box, Flex, HStack, Center, Heading, Text, Divider, Link } from '@chakra-ui/react';
-
-const CustomLink = ({ href, children, ...rest }) => {
-  const orange = '#EDBC41';
-  return (
-    <Link
-      className="link"
-      href={href}
-      color={orange}
-      isExternal
-      style={{ textDecoration: 'none' }}
-      {...rest}
-    >
-      {children}
-    </Link>
-  );
-};
+import { Stack, Box, Text } from '@chakra-ui/react';
+import { GiCaravan } from 'react-icons/gi';
+import { Title } from './Title';
+import { CustomLink } from './CustomLink';
 
 export const About = () => {
   const orange = '#EDBC41';
   return (
-    <HStack id="about" w="50%" mb="20">
-      <Box w="60%">
-        <Flex flexDirection="row" align="center" mb="5">
-          <Heading as="h3" size="lg" color="white" whiteSpace="nowrap" mr="5">
-            <span style={{ color: orange }}>01. </span>About Me
-          </Heading>
-          <Divider />
-        </Flex>
+    <Stack id="about" w="50%" h="90vh" direction="row">
+      <Box w="60%" mt="12%">
+        <Title index={1} text="About Me" />
         <Box color="white">
           <Text fontSize="lg" mb="5">
-            Hello! My name is Kenji and I&apos;m from Tahiti, French Polynesia. Currently, I&apos;m
-            completing my{' '}
+            Hi there! My name is Kenji and I&apos;m from Tahiti, French Polynesia. Currently,
+            I&apos;m completing my{' '}
             <CustomLink
               href="https://www.esilv.fr/en/programmes/master-degree-engineering/"
               color={orange}
@@ -42,14 +23,39 @@ export const About = () => {
             starting with Bitcoin then overtime, more I learned about it, I understood the benefits
             of this technology and the importance to build around it.
           </Text>
-          <Text fontSize="lg">
+          <Text fontSize="lg" mb="5">
             Fast-forward to today, I had the opportunity to work at an{' '}
-            <CustomLink href="https://www.wakam.com/en/">Insurance company</CustomLink> and
-            collaborate on a student project with a{' '}
-            <CustomLink href="https://www.soprabanking.com/">Banking company</CustomLink>.
+            <CustomLink href="https://www.wakam.com/en/" color={orange}>
+              Insurance company
+            </CustomLink>{' '}
+            and collaborate on a student project with a{' '}
+            <CustomLink href="https://www.soprabanking.com/" color={orange}>
+              Banking company
+            </CustomLink>
+            . My goal is to keep learning everyday and build things around DeFi and NFTs while
+            exploring other ecosystems such as Polkadot and Cardano.
+          </Text>
+          <Text fontSize="lg" mb="5">
+            Aside from that, I really enjoy video games like{' '}
+            <CustomLink href="https://playvalorant.com/en-us/" color={orange}>
+              Valorant
+            </CustomLink>{' '}
+            and watching animes such as{' '}
+            <CustomLink href="https://www.crunchyroll.com/dr-stone/videos" color={orange}>
+              Dr. Stone
+            </CustomLink>
+            ,{' '}
+            <CustomLink href="https://www.crunchyroll.com/jujutsu-kaisen" color={orange}>
+              Jujutsu Kaisen
+            </CustomLink>{' '}
+            and{' '}
+            <CustomLink href="https://www.netflix.com/search?q=Owari%20no%20Seraph" color={orange}>
+              Owari no Seraph
+            </CustomLink>
+            .
           </Text>
         </Box>
       </Box>
-    </HStack>
+    </Stack>
   );
 };
