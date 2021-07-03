@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Box, Flex } from '@chakra-ui/react';
-import { Navbar, Hero, LeftSidebar, About, TechStack } from '@/components';
+import { Navbar, Hero, LeftSidebar, About, Experiences, TechStack } from '@/components';
 
 export default function Home() {
   return (
@@ -15,7 +15,8 @@ export default function Home() {
       </Flex>
       <main style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <About />
-        <TechStack />
+        <Experiences />
+        {/* <TechStack /> */}
       </main>
     </Box>
   );

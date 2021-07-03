@@ -1,52 +1,36 @@
 import Image from 'next/image';
-import { Grid, HStack, Box, Center, Text, Icon } from '@chakra-ui/react';
+import { Stack, Grid, HStack, Box, Center, Text, Icon } from '@chakra-ui/react';
 import { FaReact } from 'react-icons/fa';
 import { SiNextDotJs, SiTypescript, SiMongodb, SiNodeDotJs } from 'react-icons/si';
 
 export const TechStack = () => {
   const color = '#1A202C';
   return (
-    <Box p={5} shadow="md" width="50%" color="white">
-      <Center>
-        <Text fontSize="4xl">Tech Stack</Text>
-      </Center>
-      <Center mb="6">
-        <Text fontSize="xl">
-          A list of my favorite tools and technologies that I use on a regular basis.
-        </Text>
-      </Center>
-      {/* <Center mb="6">
-        <HStack spacing={6} align="center">
-          {categories.map(({ id, label, icon }) => (
-            <Button
-              key={id}
-              variant="ghost"
-              bg={color}
-              fontWeight="normal"
-              leftIcon={icon}
-              iconSpacing="5"
-              px="6"
-              py="0"
-            >
-              {label}
-            </Button>
+    <Stack w="50%" h="70vh" direction="column">
+      <Box p="5" shadow="md" width="50%" color="white">
+        <Center>
+          <Text fontSize="4xl">Tech Stack</Text>
+        </Center>
+        <Center mb="6">
+          <Text fontSize="xl">
+            A list of my favorite tools and technologies that I use on a regular basis.
+          </Text>
+        </Center>
+        <Grid templateColumns="repeat(3, 3fr)" gap={5}>
+          {technologies.map(({ id, label, icon, description }) => (
+            <HStack key={id} w="100%" h="20" bg={color} px="4" borderRadius="10px">
+              <Center w="12" h="12" bg={icon.backgroundColor} borderRadius="10px">
+                {icon.value}
+              </Center>
+              <Box>
+                <Text>{label}</Text>
+                <Text fontSize="sm">{description}</Text>
+              </Box>
+            </HStack>
           ))}
-        </HStack>
-      </Center> */}
-      <Grid templateColumns="repeat(3, 3fr)" gap={5}>
-        {technologies.map(({ id, label, icon, description }) => (
-          <HStack key={id} w="100%" h="20" bg={color} px="4" borderRadius="10px">
-            <Center w="12" h="12" bg={icon.backgroundColor} borderRadius="10px">
-              {icon.value}
-            </Center>
-            <Box>
-              <Text>{label}</Text>
-              <Text fontSize="sm">{description}</Text>
-            </Box>
-          </HStack>
-        ))}
-      </Grid>
-    </Box>
+        </Grid>
+      </Box>
+    </Stack>
   );
 };
 
@@ -142,30 +126,3 @@ const technologies = [
     category: 'web',
   },
 ];
-
-// const categories = [
-//   {
-//     id: 0,
-//     label: 'All',
-//     category: 'all',
-//     icon: <Icon as={BsFillLightningFill} boxSize={4} />,
-//   },
-//   {
-//     id: 1,
-//     label: 'Web',
-//     category: 'web',
-//     icon: <Icon as={FaDesktop} boxSize={4} />,
-//   },
-//   {
-//     id: 2,
-//     label: 'Smart Contract',
-//     category: 'smart contract',
-//     icon: <Icon as={BiCodeCurly} boxSize={4} />,
-//   },
-//   {
-//     id: 3,
-//     label: 'Languages',
-//     category: 'languages',
-//     icon: <Icon as={BiCodeAlt} boxSize={4} />,
-//   },
-// ];
