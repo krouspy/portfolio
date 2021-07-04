@@ -1,4 +1,4 @@
-import { Stack, Grid, Flex, Box, Text, Icon, Spacer, Link } from '@chakra-ui/react';
+import { Stack, Grid, Flex, Text, Icon, IconButton, Spacer, Link } from '@chakra-ui/react';
 import { FiFolder, FiGithub } from 'react-icons/fi';
 import { Title } from './Title';
 
@@ -8,20 +8,22 @@ export const Projects = () => {
     <Stack w="60%" minH="50vh" color="#fff">
       <Title index={3} text="Projects" w="60%" mb="8" />
       <Grid templateColumns="repeat(3, 1fr)" gap={6}>
-        {projects.map(({ id, href, title, description, inProgress, technologies }) => (
+        {projects.map(({ id, title, description, github, website, inProgress, technologies }) => (
           <Link
             key={id}
-            href={href}
+            href={website || github}
             isExternal
             textDecoration="none"
-            _hover={{ textDecoration: 'none' }}
+            transition="0.5s ease"
+            _hover={{ textDecoration: 'none', mt: '-7px' }}
           >
             <Stack
               bg="#112341"
               w="100%"
               h="300"
               px="4"
-              py="2"
+              pt="3"
+              pb="2"
               direction="column"
               borderRadius="10px"
             >
@@ -62,9 +64,10 @@ const projects = [
   {
     id: 0,
     title: 'Portfolio',
-    description: 'First version of my personal website built with Next.js and hosted on Vercel',
-    inProgress: false,
-    href: 'https://github.com/krouspy/portfolio',
+    description:
+      'First version of my personal website built with Next.js and hosted on Vercel. Some tweaking needs to be done regarding responsiveness',
+    inProgress: true,
+    github: 'https://github.com/krouspy/portfolio',
     technologies: ['Next.js', 'Vercel', 'Chakra UI'],
   },
   {
@@ -73,7 +76,7 @@ const projects = [
     description:
       'Collaborative platform to organize roadtrip. Currently exploring tools like Firebase',
     inProgress: true,
-    href: 'https://github.com/krouspy/loom',
+    github: 'https://github.com/krouspy/loom',
     technologies: ['Next.js', 'Chakra UI', 'Mongoose'],
   },
   {
@@ -81,7 +84,7 @@ const projects = [
     title: 'Lunary',
     description: 'NFT marketplace built on The Graph, similar to OpenSea',
     inProgress: true,
-    href: 'https://github.com/krouspy/lunary',
+    github: 'https://github.com/krouspy/lunary',
     technologies: ['The Graph', 'React', 'Solidity'],
   },
   {
@@ -90,7 +93,7 @@ const projects = [
     description:
       'Some blockchain courses I had at my engineering school. It goes from receiving bitcoin payments through the lightning network to writing smart contracts on Ethereum',
     inProgress: false,
-    href: 'https://github.com/krouspy/monnaies-numeriques',
+    github: 'https://github.com/krouspy/monnaies-numeriques',
     technologies: ['Bitcoin', 'Ethereum'],
   },
   {
@@ -98,7 +101,8 @@ const projects = [
     title: 'Ethereum - Selfish Mining',
     description: 'Website that explains how selfish mining on Ethereum works and its impact',
     inProgress: false,
-    href: 'https://github.com/krouspy/selfish-mining',
+    github: 'https://github.com/krouspy/selfish-mining',
+    website: 'https://krouspy.selfish-mining.com/',
     technologies: ['Ethereum', 'React', 'Netlify'],
   },
   {
@@ -107,7 +111,7 @@ const projects = [
     description:
       'Documentation explaining how to write a plugin in python for the Clightning client',
     inProgress: false,
-    href: 'https://github.com/krouspy/clightning-plugin',
+    github: 'https://github.com/krouspy/clightning-plugin',
     technologies: ['Lightning', 'Python'],
   },
 ];

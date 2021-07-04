@@ -5,58 +5,6 @@ import { MdPlayArrow } from 'react-icons/md';
 import { Title } from './Title';
 import { CustomLink } from './CustomLink';
 
-const jobs = [
-  {
-    id: 0,
-    title: 'Blockchain Developer',
-    company: {
-      name: 'Wakam',
-      href: 'https://www.wakam.com/en/',
-    },
-    timeframe: 'October 2019 - Present',
-    description: [
-      {
-        id: 0,
-        content: 'Build internal tools around our Quorum blockchain',
-      },
-      {
-        id: 1,
-        content:
-          'Work with a variety of languages, platforms and frameworks such as Solidity, React, Typescript, Azure, C# and Ligo',
-      },
-      {
-        id: 2,
-        content:
-          'Explore the Tezos blockchain features such as Ligo language and FA1.2 and FA2 standards',
-      },
-    ],
-  },
-  {
-    id: 1,
-    title: 'Full-Stack Developer',
-    company: {
-      name: 'SopraBankingSoftware',
-      href: 'https://www.soprabanking.com/',
-    },
-    timeframe: 'October 2020 - January 2021',
-    description: [
-      {
-        id: 0,
-        content: 'Developed a collocation platform on a private blockchain Hyperledger Besu',
-      },
-      {
-        id: 1,
-        content: 'Designed the architecture of our back-end from server to smart contracts',
-      },
-      {
-        id: 2,
-        content:
-          'Explored tools to monitor blockchain events such as Eventeum and the ELK stack (Elasticsearch, Logstach, Kibana)',
-      },
-    ],
-  },
-];
-
 export const Experiences = () => {
   const [job, setJob] = useState(jobs[0]);
   const [selected, setSelected] = useState(0);
@@ -75,7 +23,7 @@ export const Experiences = () => {
   return (
     <Stack id="about" w="50%" minH="50vh" mb="20">
       <Box w="70%" ml="10%">
-        <Title index={2} text="Experiences" />
+        <Title index={2} text="Where I've worked" />
         <Stack color="white" direction="row" spacing={10}>
           <ButtonGroup
             height="100%"
@@ -128,3 +76,55 @@ export const Experiences = () => {
     </Stack>
   );
 };
+
+const jobs = [
+  {
+    id: 0,
+    title: 'Blockchain Developer',
+    company: {
+      name: 'Wakam',
+      href: 'https://www.wakam.com/en/',
+    },
+    timeframe: 'October 2019 - Present',
+    description: [
+      {
+        id: 0,
+        content: 'Build internal tools around our Quorum blockchain',
+      },
+      {
+        id: 1,
+        content:
+          'Work with a variety of languages, platforms and frameworks such as Solidity, React, Typescript, Azure, C# and Ligo',
+      },
+      {
+        id: 2,
+        content:
+          'Explore the Tezos blockchain features such as Ligo language and FA1.2 and FA2 standards',
+      },
+    ],
+  },
+  {
+    id: 1,
+    title: 'Full-Stack Developer',
+    company: {
+      name: 'SopraBankingSoftware',
+      href: 'https://www.soprabanking.com/',
+    },
+    timeframe: 'October 2020 - January 2021',
+    description: [
+      {
+        id: 0,
+        content: 'Developed a collocation platform on a private blockchain Hyperledger Besu',
+      },
+      {
+        id: 1,
+        content: 'Designed the architecture of our back-end from server to smart contracts',
+      },
+      {
+        id: 2,
+        content:
+          'Explored tools to monitor blockchain events such as Eventeum and the ELK stack (Elasticsearch, Logstach, Kibana)',
+      },
+    ],
+  },
+];
