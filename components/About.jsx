@@ -1,13 +1,12 @@
-import { Stack, Box, Text } from '@chakra-ui/react';
-import { GiCaravan } from 'react-icons/gi';
+import { HStack, Box, Image, Text } from '@chakra-ui/react';
 import { Title } from './Title';
 import { CustomLink } from './CustomLink';
 
 export const About = () => {
   const orange = '#EDBC41';
   return (
-    <Stack id="about" w="50%" h="90vh" direction="row">
-      <Box w="60%" mt="12%">
+    <HStack id="about" w="50%" h="90vh" direction="row" pt="10%">
+      <Box w="60%" h="100%">
         <Title index={1} text="About Me" />
         <Box color="white">
           <Text fontSize="lg" mb="5">
@@ -56,6 +55,11 @@ export const About = () => {
           </Text>
         </Box>
       </Box>
-    </Stack>
+      <Box w="40%" h="100%" pt="10%" pl="2%">
+        <Box pos="relative" bg={orange} _hover={{ bg: 'transparent' }} transition="0.5s ease">
+          <Image src="/profile.jpg" alt="profile" w="100%" objectFit="cover" opacity={0.8} />
+        </Box>
+      </Box>
+    </HStack>
   );
 };
