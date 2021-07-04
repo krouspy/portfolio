@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { HStack, Stack, Box, ButtonGroup, Button, Text } from '@chakra-ui/react';
+import { Stack, Box, ButtonGroup, Button, Text } from '@chakra-ui/react';
 import { BsDot } from 'react-icons/bs';
 import { MdPlayArrow } from 'react-icons/md';
 import { Title } from './Title';
@@ -21,7 +21,7 @@ export const Experiences = () => {
   const orange = '#EDBC41';
 
   return (
-    <Stack id="about" w="50%" minH="50vh" mb="20">
+    <Stack id="jobs" w="50%" minH="50vh" mb="20" pt="6vh">
       <Box w="70%" ml="10%">
         <Title index={2} text="Where I've worked" />
         <Stack color="white" direction="row" spacing={10}>

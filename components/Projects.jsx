@@ -1,11 +1,11 @@
-import { Stack, Grid, Flex, Text, Icon, IconButton, Spacer, Link } from '@chakra-ui/react';
+import { Stack, Grid, Flex, Text, Icon, Spacer, Link } from '@chakra-ui/react';
 import { FiFolder, FiGithub } from 'react-icons/fi';
 import { Title } from './Title';
 
 export const Projects = () => {
   const orange = '#EDBC41';
   return (
-    <Stack w="60%" minH="50vh" color="#fff">
+    <Stack id="projects" w="60%" minH="50vh" color="#fff" pt="6vh">
       <Title index={3} text="Projects" w="60%" mb="8" />
       <Grid templateColumns="repeat(3, 1fr)" gap={6}>
         {projects.map(({ id, title, description, github, website, inProgress, technologies }) => (
@@ -64,8 +64,7 @@ const projects = [
   {
     id: 0,
     title: 'Portfolio',
-    description:
-      'First version of my personal website built with Next.js and hosted on Vercel. Some tweaking needs to be done regarding responsiveness',
+    description: 'First version of my personal website built with Next.js and hosted on Vercel',
     inProgress: true,
     github: 'https://github.com/krouspy/portfolio',
     technologies: ['Next.js', 'Vercel', 'Chakra UI'],

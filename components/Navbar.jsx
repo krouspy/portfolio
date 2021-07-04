@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import {
   Box,
@@ -24,23 +25,45 @@ const NAV_ITEMS = [
   {
     id: 2,
     text: 'Experiences',
+    href: '#jobs',
   },
   {
     id: 3,
-    text: 'Work',
-    href: '#',
+    text: 'Projects',
+    href: '#projects',
   },
   {
     id: 4,
     text: 'Contact',
-    href: '#',
+    href: '#contact',
   },
 ];
 
 export const Navbar = () => {
+  const [state, setState] = useState({ previousScrollPosition: 0, visible: true });
   const { isOpen, onToggle } = useDisclosure();
+
+  useEffect(() => {
+    setState({ previousScrollPosition: scrollY, visible: true });
+    window.addEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleScroll = () => {
+    setState(prevState => ({
+      previousScrollPosition: window.scrollY,
+      visible: prevState.previousScrollPosition > window.scrollY,
+    }));
+  };
+
   return (
-    <Box h="6vh">
+    <Box
+      pos="fixed"
+      w="100%"
+      maxW="100%"
+      top={state.visible ? 0 : -60}
+      transition="top 0.3s"
+      zIndex={2}
+    >
       <Flex py={{ base: 2 }} px={{ base: 4 }} align="center">
         <Flex
           flex={{ base: 1, md: 'auto' }}
@@ -59,7 +82,7 @@ export const Navbar = () => {
           <Image src="/logo.svg" alt="logo" width="48" height="48" />
         </Flex>
 
-        <Stack flex={{ base: 1, md: 0 }} justify="flex-end" direction="row">
+        <Stack>
           <DesktopNav />
         </Stack>
       </Flex>
@@ -74,7 +97,7 @@ export const Navbar = () => {
 const DesktopNav = () => {
   const orange = '#EDBC41';
   return (
-    <Stack display="flex" direction="row" alignItems="center" spacing={4}>
+    <Stack direction="row" alignItems="center" spacing={4}>
       {NAV_ITEMS.map(({ id, text, href }) => {
         const index = `0${id}. `;
         return (
@@ -82,7 +105,7 @@ const DesktopNav = () => {
             <Text p={2} color={orange} display="inline-block">
               {index}
             </Text>
-            <CustomLink href={href} color="white" fontSize="md">
+            <CustomLink href={href} isExternal={false} color="#fff" fontSize="md">
               {text}
             </CustomLink>
           </Box>
