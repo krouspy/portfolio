@@ -26,7 +26,8 @@ const jobs = [
       },
       {
         id: 2,
-        content: 'Explore FA1.2 and FA2 standards of the Tezos blockchain',
+        content:
+          'Explore the Tezos blockchain features such as Ligo language and FA1.2 and FA2 standards',
       },
     ],
   },
