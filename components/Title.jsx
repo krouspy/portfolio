@@ -1,6 +1,6 @@
-import { Flex, Heading, Text, Divider } from '@chakra-ui/react';
+import { Flex, Heading, Divider } from '@chakra-ui/react';
 
-export const Title = ({ index, text, ...rest }) => {
+export const Title = ({ index, text, noDivider, ...rest }) => {
   const orange = '#EDBC41';
   const id = `0${index}. `;
   return (
@@ -9,7 +9,7 @@ export const Title = ({ index, text, ...rest }) => {
         <span style={{ color: orange, fontSize: '0.8em' }}>{id}</span>
         {text}
       </Heading>
-      <Divider />
+      {!noDivider && <Divider />}
     </Flex>
   );
 };
