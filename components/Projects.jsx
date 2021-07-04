@@ -9,9 +9,14 @@ export const Projects = () => {
       <Title index={3} text="Projects" w="60%" mb="8" />
       <Grid templateColumns="repeat(3, 1fr)" gap={6}>
         {projects.map(({ id, href, title, description, inProgress, technologies }) => (
-          <Link href={href} isExternal textDecoration="none" _hover={{ textDecoration: 'none' }}>
+          <Link
+            key={id}
+            href={href}
+            isExternal
+            textDecoration="none"
+            _hover={{ textDecoration: 'none' }}
+          >
             <Stack
-              key={id}
               bg="#112341"
               w="100%"
               h="300"
