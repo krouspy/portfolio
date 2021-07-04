@@ -7,7 +7,7 @@ export const Contact = () => {
     <Center id="contact" minH="50vh" color="#fff" flexDirection="column">
       <Title index={4} text="Contact" />
       <Text fontSize="xl" maxW="80%" textAlign="center">
-        Don't hesitate to drop me a message, I'll try my best to get back to you!
+        Don&apos;t hesitate to drop me a message, I&apos;ll try my best to get back to you!
       </Text>
       <Link
         href="mailto: krouspyy@gmail.com"
