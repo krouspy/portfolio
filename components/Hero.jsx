@@ -31,8 +31,7 @@ export const Hero = () => {
           borderWidth="1px"
           mt="10"
           p="6"
-          opacity={1}
-          _hover={{ opacity: 1 }}
+          _hover={{ bg: '#1A1930' }}
         >
           Get In Touch
         </Button>

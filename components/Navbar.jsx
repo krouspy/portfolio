@@ -96,7 +96,7 @@ export const Navbar = () => {
             color={orange}
             borderColor={orange}
             variant="outline"
-            _hover={{ bg: 'transparent' }}
+            _hover={{ bg: '#1A1930' }}
           >
             Resume
           </Button>
