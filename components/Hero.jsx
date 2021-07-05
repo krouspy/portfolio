@@ -4,7 +4,7 @@ import { HStack, Box, Heading, Text, Button } from '@chakra-ui/react';
 export const Hero = () => {
   const orange = '#EDBC41';
   return (
-    <HStack pos="relative" h="94vh" w="100%" fontFamily="HindMadurai" pl="20%">
+    <HStack pos="relative" h="100vh" w="100%" fontFamily="HindMadurai" pl="20%">
       <Box pos="absolute" zIndex={1} w="70%" h="100%" pt="12%" color="white">
         <Heading as="h1" fontSize="lg" mb="3" color={orange}>
           Hello, my name is
@@ -22,9 +22,10 @@ export const Hero = () => {
           other ecosystems.
         </Text>
         <Button
-          variant="outline"
+          variant="ghost"
           color={orange}
           borderColor={orange}
+          borderWidth="1px"
           mt="10"
           p="6"
           opacity={1}

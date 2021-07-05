@@ -5,7 +5,7 @@ import { Title } from './Title';
 export const Projects = () => {
   const orange = '#EDBC41';
   return (
-    <Stack id="projects" w="60%" minH="50vh" color="#fff" pt="6vh">
+    <Stack id="projects" w={['80%', '80%', '80%', '80%', '60%']} minH="50vh" color="#fff" pt="6vh">
       <Title index={3} text="Projects" w="60%" mb="8" />
       <Grid templateColumns="repeat(3, 1fr)" gap={6}>
         {projects.map(({ id, title, description, github, website, inProgress, technologies }) => (
@@ -73,7 +73,7 @@ const projects = [
     id: 1,
     title: 'Loom',
     description:
-      'Collaborative platform to organize roadtrip. Currently exploring tools like Firebase',
+      'Collaborative platform to organize roadtrips. Currently exploring tools like Firebase',
     inProgress: true,
     github: 'https://github.com/krouspy/loom',
     technologies: ['Next.js', 'Chakra UI', 'Mongoose'],

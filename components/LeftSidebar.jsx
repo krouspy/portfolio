@@ -5,7 +5,7 @@ import { IconButtonLink } from './IconButtonLink';
 
 export const LeftSidebar = () => {
   return (
-    <Flex pos="fixed" direction="column" h="27%" align="center" bottom="0" left="4%" zIndex="1">
+    <Flex pos="fixed" direction="column" h="27%" align="center" bottom="0" left="2%" zIndex="1">
       <Flex flexDirection="column">
         {data.map(({ id, href, ariaLabel, icon }) => (
           <IconButtonLink key={id} href={href} aria-label={ariaLabel} icon={icon} />

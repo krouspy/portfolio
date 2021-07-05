@@ -1,19 +1,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import {
-  Box,
-  Flex,
-  Text,
-  IconButton,
-  Button,
-  Stack,
-  Collapse,
-  Icon,
-  Link,
-  useColorModeValue,
-  useDisclosure,
-} from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon, ChevronDownIcon } from '@chakra-ui/icons';
+import { Box, Flex, Text, IconButton, Button, Stack, Link, useDisclosure } from '@chakra-ui/react';
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { CustomLink } from './CustomLink';
 
 const NAV_ITEMS = [
@@ -55,14 +43,18 @@ export const Navbar = () => {
     }));
   };
 
+  const orange = '#EDBC41';
+
   return (
     <Box
       pos="fixed"
       w="100%"
       maxW="100%"
       top={state.visible ? 0 : -60}
-      transition="top 0.3s"
+      transition="top 0.3s ease"
       zIndex={2}
+      pl="20"
+      pr="10"
     >
       <Flex py={{ base: 2 }} px={{ base: 4 }} align="center">
         <Flex
@@ -78,99 +70,33 @@ export const Navbar = () => {
           />
         </Flex>
 
-        <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Image src="/logo.svg" alt="logo" width="48" height="48" />
+        <Flex flex={{ base: 1 }} justify={{ base: 'start', md: 'start' }}>
+          <Link href="/">
+            <Image src="/logo.svg" alt="logo" width="48" height="48" />
+          </Link>
         </Flex>
 
-        <Stack>
-          <DesktopNav />
+        <Stack flex={{ base: 1, md: 0 }} justify="flex-end" direction="row" spacing={6}>
+          {NAV_ITEMS.map(({ id, text, href }) => {
+            const index = `0${id}. `;
+            return (
+              <Box key={id} whiteSpace="nowrap" display={{ base: 'none', md: 'inline-block' }}>
+                <Text p={2} color={orange} display="inline-block">
+                  {index}
+                </Text>
+                <CustomLink href={href} isExternal={false} color="#fff" fontSize="md">
+                  {text}
+                </CustomLink>
+              </Box>
+            );
+          })}
+          <Button color={orange} borderColor={orange} variant="outline">
+            <a href="/Resume.pdf" target="_blank">
+              Resume
+            </a>
+          </Button>
         </Stack>
       </Flex>
-
-      <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
-      </Collapse>
     </Box>
-  );
-};
-
-const DesktopNav = () => {
-  const orange = '#EDBC41';
-  return (
-    <Stack direction="row" alignItems="center" spacing={4}>
-      {NAV_ITEMS.map(({ id, text, href }) => {
-        const index = `0${id}. `;
-        return (
-          <Box key={id} whiteSpace="nowrap">
-            <Text p={2} color={orange} display="inline-block">
-              {index}
-            </Text>
-            <CustomLink href={href} isExternal={false} color="#fff" fontSize="md">
-              {text}
-            </CustomLink>
-          </Box>
-        );
-      })}
-      <Button color={orange} borderColor={orange} variant="outline">
-        Resume
-      </Button>
-    </Stack>
-  );
-};
-
-const MobileNav = () => (
-  <Stack bg={useColorModeValue('white', 'gray.800')} p={4} display={{ md: 'none' }}>
-    {NAV_ITEMS.map(({ text, ...rest }) => (
-      <MobileNavItem key={text} {...rest} />
-    ))}
-  </Stack>
-);
-
-const MobileNavItem = ({ label, children, href }) => {
-  const { isOpen, onToggle } = useDisclosure();
-  return (
-    <Stack spacing={4} onClick={children && onToggle}>
-      <Flex
-        py={2}
-        as={Link}
-        href={href ?? '#'}
-        justify={'space-between'}
-        align={'center'}
-        _hover={{
-          textDecoration: 'none',
-        }}
-      >
-        <Text fontWeight={600} color={useColorModeValue('gray.600', 'gray.200')}>
-          {label}
-        </Text>
-        {children && (
-          <Icon
-            as={ChevronDownIcon}
-            transition={'all .25s ease-in-out'}
-            transform={isOpen ? 'rotate(180deg)' : ''}
-            w={6}
-            h={6}
-          />
-        )}
-      </Flex>
-
-      <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
-        <Stack
-          mt={2}
-          pl={4}
-          borderLeft={1}
-          borderStyle={'solid'}
-          borderColor={useColorModeValue('gray.200', 'gray.700')}
-          align={'start'}
-        >
-          {children &&
-            children.map(child => (
-              <Link key={child.label} py={2} href={child.href}>
-                {child.label}
-              </Link>
-            ))}
-        </Stack>
-      </Collapse>
-    </Stack>
   );
 };

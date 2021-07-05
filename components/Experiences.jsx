@@ -21,7 +21,7 @@ export const Experiences = () => {
   const orange = '#EDBC41';
 
   return (
-    <Stack id="jobs" w="50%" minH="50vh" mb="20" pt="6vh">
+    <Stack id="jobs" w={['80%', '80%', '80%', '80%', '50%']} minH="50vh" mb="20" pt="6vh">
       <Box w="70%" ml="10%">
         <Title index={2} text="Where I've worked" />
         <Stack color="white" direction="row" spacing={10}>
@@ -94,7 +94,7 @@ const jobs = [
       {
         id: 1,
         content:
-          'Work with a variety of languages, platforms and frameworks such as Solidity, React, Typescript, Azure, C# and Ligo',
+          'Work with a variety of languages, platforms and frameworks such as Solidity, React, Typescript, Azure, C# and Docker',
       },
       {
         id: 2,
@@ -118,7 +118,8 @@ const jobs = [
       },
       {
         id: 1,
-        content: 'Designed the architecture of our back-end from server to smart contracts',
+        content:
+          'Designed the architecture and wrote our back-end in Node.js, Express, Mongoose and Solidity',
       },
       {
         id: 2,
