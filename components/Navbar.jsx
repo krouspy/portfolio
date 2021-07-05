@@ -53,8 +53,7 @@ export const Navbar = () => {
       top={state.visible ? 0 : -60}
       transition="top 0.3s ease"
       zIndex={2}
-      pl="20"
-      pr="10"
+      px="2%"
     >
       <Flex py={{ base: 2 }} px={{ base: 4 }} align="center">
         <Flex
