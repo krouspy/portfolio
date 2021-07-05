@@ -93,11 +93,15 @@ const jobs = [
       },
       {
         id: 1,
+        content: 'Write smart contracts around ERC20, ERC721 and ERC1155 standards',
+      },
+      {
+        id: 2,
         content:
           'Work with a variety of languages, platforms and frameworks such as Solidity, React, Typescript, Azure, C# and Docker',
       },
       {
-        id: 2,
+        id: 3,
         content:
           'Explore the Tezos blockchain features such as Ligo language and FA1.2 and FA2 standards',
       },

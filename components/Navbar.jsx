@@ -90,10 +90,16 @@ export const Navbar = () => {
               </Box>
             );
           })}
-          <Button color={orange} borderColor={orange} variant="outline">
-            <a href="/Resume.pdf" target="_blank">
-              Resume
-            </a>
+          <Button
+            as="a"
+            href="/Resume.pdf"
+            target="_blank"
+            color={orange}
+            borderColor={orange}
+            variant="outline"
+            _hover={{ bg: 'transparent' }}
+          >
+            Resume
           </Button>
         </Stack>
       </Flex>
