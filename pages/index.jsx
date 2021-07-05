@@ -6,6 +6,9 @@ export default function Home() {
   return (
     <Box maxWidth="100vw" minHeight="100vh" bg="#0E0F2F" fontFamily="HindMadurai">
       <Head>
+        <title>Kenji LAU</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="icon" href="/logo.svg" />
         <link rel="preload" href="/fonts/HindMadurai/HindMadurai-Regular.ttf" />
       </Head>
       <Navbar />
