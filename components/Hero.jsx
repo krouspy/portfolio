@@ -22,6 +22,9 @@ export const Hero = () => {
           other ecosystems.
         </Text>
         <Button
+          as="a"
+          href="mailto: krouspyy@gmail.com"
+          target="_blank"
           variant="ghost"
           color={orange}
           borderColor={orange}
