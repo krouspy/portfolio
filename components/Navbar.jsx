@@ -91,7 +91,7 @@ export const Navbar = () => {
           })}
           <Button
             as="a"
-            href="/resume.pdf"
+            href="/Resume.pdf"
             target="_blank"
             color={orange}
             borderColor={orange}
