@@ -72,11 +72,10 @@ const projects = [
   {
     id: 1,
     title: 'Loom',
-    description:
-      'Collaborative platform to organize roadtrips. Currently exploring tools like Firebase',
+    description: 'Collaborative platform to organize roadtrips. Currently exploring Firebase',
     inProgress: true,
     github: 'https://github.com/krouspy/loom',
-    technologies: ['Next.js', 'Chakra UI', 'Mongoose'],
+    technologies: ['Next.js', 'Firebase', 'Chakra UI'],
   },
   {
     id: 2,
