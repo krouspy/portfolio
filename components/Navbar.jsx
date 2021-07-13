@@ -49,18 +49,15 @@ export const Navbar = () => {
     <Box
       pos="fixed"
       w="100%"
-      maxW="100%"
+      maxW="100vw"
       top={state.visible ? 0 : -60}
       transition="top 0.3s ease"
       zIndex={2}
       px="2%"
+      py="0.5%"
     >
       <Flex py={{ base: 2 }} px={{ base: 4 }} align="center">
-        <Flex
-          flex={{ base: 1, md: 'auto' }}
-          ml={{ base: -2 }}
-          display={{ base: 'flex', md: 'none' }}
-        >
+        <Flex flex={{ base: 1, md: 'auto' }} ml={{ base: -2 }} display="none">
           <IconButton
             onClick={onToggle}
             icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />}
@@ -69,7 +66,7 @@ export const Navbar = () => {
           />
         </Flex>
 
-        <Flex flex={{ base: 1 }} justify={{ base: 'start', md: 'start' }}>
+        <Flex flex={{ base: 1 }} justify={{ base: 'start' }}>
           <Link href="/">
             <Image src="/logo.svg" alt="logo" width="48" height="48" />
           </Link>

@@ -21,7 +21,7 @@ export const Experiences = () => {
   const orange = '#EDBC41';
 
   return (
-    <Stack id="jobs" w={['80%', '80%', '80%', '80%', '50%']} minH="50vh" mb="20" pt="6vh">
+    <Stack id="jobs" w={{ base: '100%', lg: '80%', xl: '60%' }} minH="50vh" mb="20" pt="6vh">
       <Box w="70%" ml="10%">
         <Title index={2} text="Where I've worked" />
         <Stack color="white" direction="row" spacing={10}>
@@ -93,7 +93,7 @@ const jobs = [
       },
       {
         id: 1,
-        content: 'Write smart contracts around ERC20, ERC721 and ERC1155 standards',
+        content: 'Write smart contracts based on ERC20, ERC721 and ERC1155 standards',
       },
       {
         id: 2,

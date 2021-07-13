@@ -1,11 +1,25 @@
 import { Bitcoin } from '../components/Images';
-import { HStack, Box, Heading, Text, Button } from '@chakra-ui/react';
+import { Stack, Box, Heading, Text, Button } from '@chakra-ui/react';
 
 export const Hero = () => {
   const orange = '#EDBC41';
   return (
-    <HStack pos="relative" h="100vh" w="100%" fontFamily="HindMadurai" pl="20%">
-      <Box pos="absolute" zIndex={1} w="70%" h="100%" pt="12%" color="white">
+    <Stack
+      direction={['column', 'row']}
+      pos="relative"
+      h="100vh"
+      w="100%"
+      fontFamily="HindMadurai"
+      pl={{ base: '10%', lg: '20%' }}
+    >
+      <Box
+        pos="absolute"
+        zIndex={1}
+        w={{ base: '100%', lg: '70%' }}
+        h="100%"
+        pt="12%"
+        color="white"
+      >
         <Heading as="h1" fontSize="lg" mb="3" color={orange}>
           Hello, my name is
         </Heading>
@@ -36,9 +50,17 @@ export const Hero = () => {
           Get In Touch
         </Button>
       </Box>
-      <Box pos="absolute" zIndex={0} w="30%" h="100%" pt="5%" left="55%">
+      <Box
+        pos="absolute"
+        display={{ base: 'none', md: 'inline' }}
+        zIndex={0}
+        w={{ base: '100%', lg: '30%' }}
+        h="100%"
+        pt="5%"
+        left="55%"
+      >
         <Bitcoin />
       </Box>
-    </HStack>
+    </Stack>
   );
 };

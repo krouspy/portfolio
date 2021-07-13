@@ -5,9 +5,9 @@ import { Title } from './Title';
 export const Projects = () => {
   const orange = '#EDBC41';
   return (
-    <Stack id="projects" w={['80%', '80%', '80%', '80%', '60%']} minH="50vh" color="#fff" pt="6vh">
+    <Stack id="projects" w={{ base: '80%', lg: 900, xl: 1100 }} minH="50vh" color="#fff" pt="6vh">
       <Title index={3} text="Projects" w="60%" mb="8" />
-      <Grid templateColumns="repeat(3, 1fr)" gap={6}>
+      <Grid templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }} gap={6}>
         {projects.map(({ id, title, description, github, website, inProgress, technologies }) => (
           <Link
             key={id}
