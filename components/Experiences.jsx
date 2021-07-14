@@ -5,7 +5,7 @@ import { MdPlayArrow } from 'react-icons/md';
 import { Title } from './Title';
 import { CustomLink } from './CustomLink';
 
-export const Experiences = () => {
+export const Experiences = ({ color }) => {
   const [job, setJob] = useState(jobs[0]);
   const [selected, setSelected] = useState(0);
 
@@ -18,12 +18,10 @@ export const Experiences = () => {
     return selected === buttonId ? '#fff' : 'transparent';
   };
 
-  const orange = '#EDBC41';
-
   return (
     <Stack id="jobs" w={{ base: '100%', lg: '80%', xl: '60%' }} minH="50vh" mb="20" pt="6vh">
       <Box w="70%" ml="10%">
-        <Title index={2} text="Where I've worked" />
+        <Title index={2} text="Where I've worked" color={color} />
         <Stack color="white" direction="row" spacing={10}>
           <ButtonGroup
             height="100%"
@@ -55,8 +53,8 @@ export const Experiences = () => {
           <Box w="100%">
             <Stack>
               <Text fontSize="lg">
-                {job.title + ' '} <span style={{ color: orange }}>@</span>
-                <CustomLink href={job.company.href} color={orange}>
+                {job.title + ' '} <span style={{ color: color }}>@</span>
+                <CustomLink href={job.company.href} color={color}>
                   {job.company.name}
                 </CustomLink>
               </Text>

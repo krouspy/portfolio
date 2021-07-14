@@ -27,7 +27,7 @@ const NAV_ITEMS = [
   },
 ];
 
-export const Navbar = () => {
+export const Navbar = ({ color }) => {
   const [state, setState] = useState({ previousScrollPosition: 0, visible: true });
   const { isOpen, onToggle } = useDisclosure();
 
@@ -42,8 +42,6 @@ export const Navbar = () => {
       visible: prevState.previousScrollPosition > window.scrollY,
     }));
   };
-
-  const orange = '#EDBC41';
 
   return (
     <Box
@@ -77,7 +75,7 @@ export const Navbar = () => {
             const index = `0${id}. `;
             return (
               <Box key={id} whiteSpace="nowrap" display={{ base: 'none', md: 'inline-block' }}>
-                <Text p={2} color={orange} display="inline-block">
+                <Text p={2} color={color} display="inline-block">
                   {index}
                 </Text>
                 <CustomLink href={href} isExternal={false} color="#fff" fontSize="md">
@@ -90,8 +88,8 @@ export const Navbar = () => {
             as="a"
             href="/Resume.pdf"
             target="_blank"
-            color={orange}
-            borderColor={orange}
+            color={color}
+            borderColor={color}
             variant="outline"
             _hover={{ bg: '#1A1930' }}
           >

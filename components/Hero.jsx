@@ -1,8 +1,7 @@
 import { Bitcoin } from '../components/Images';
 import { Stack, Box, Heading, Text, Button } from '@chakra-ui/react';
 
-export const Hero = () => {
-  const orange = '#EDBC41';
+export const Hero = ({ color }) => {
   return (
     <Stack
       direction={['column', 'row']}
@@ -20,7 +19,7 @@ export const Hero = () => {
         pt="12%"
         color="white"
       >
-        <Heading as="h1" fontSize="lg" mb="3" color={orange}>
+        <Heading as="h1" fontSize="lg" mb="3" color={color}>
           Hello, my name is
         </Heading>
         <Heading as="h1" fontSize="6xl" mb="3">
@@ -40,8 +39,8 @@ export const Hero = () => {
           href="mailto: krouspyy@gmail.com"
           target="_blank"
           variant="ghost"
-          color={orange}
-          borderColor={orange}
+          color={color}
+          borderColor={color}
           borderWidth="1px"
           mt="10"
           p="6"
@@ -59,7 +58,7 @@ export const Hero = () => {
         pt="5%"
         left="55%"
       >
-        <Bitcoin />
+        <Bitcoin color={color} />
       </Box>
     </Stack>
   );

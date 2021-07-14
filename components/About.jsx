@@ -12,8 +12,7 @@ const links = {
   owari: 'https://www.netflix.com/search?q=Owari%20no%20Seraph',
 };
 
-export const About = () => {
-  const orange = '#EDBC41';
+export const About = ({ color }) => {
   return (
     <Flex
       id="about"
@@ -23,13 +22,13 @@ export const About = () => {
       pt="20"
     >
       <Box w={{ base: '100%', lg: '60%' }} h="100%">
-        <Title index={1} text="About Me" />
+        <Title index={1} text="About Me" color={color} />
         <Box color="white">
           <Text fontSize="lg" mb="5">
             Hi there! My name is Kenji and I&apos;m from Tahiti, French Polynesia.
             <br />
             Currently, I&apos;m completing my{' '}
-            <CustomLink href={links.esilv} color={orange}>
+            <CustomLink href={links.esilv} color={color}>
               Master 2 Fintech program{' '}
             </CustomLink>{' '}
             at ESILV, an engineering school in Paris. I discovered cryptocurrencies in 2018,
@@ -38,31 +37,31 @@ export const About = () => {
           </Text>
           <Text fontSize="lg" mb="5">
             Fast-forward to today, I had the opportunity to work at an{' '}
-            <CustomLink href={links.wakam} color={orange}>
+            <CustomLink href={links.wakam} color={color}>
               Insurance company
             </CustomLink>{' '}
             and collaborate on a student project with a{' '}
-            <CustomLink href={links.sopra} color={orange}>
+            <CustomLink href={links.sopra} color={color}>
               Banking company
             </CustomLink>
             . My goal is to keep learning everyday and build things around DeFi and NFTs while
-            exploring other ecosystems such as Polkadot and Cardano.
+            exploring other ecosystems such as Polkadot, Polygon, Solana and Cardano.
           </Text>
           <Text fontSize="lg" mb="5">
             Aside from that, I really enjoy video games like{' '}
-            <CustomLink href={links.valorant} color={orange}>
+            <CustomLink href={links.valorant} color={color}>
               Valorant
             </CustomLink>{' '}
             and watching animes such as{' '}
-            <CustomLink href={links.drstone} color={orange}>
+            <CustomLink href={links.drstone} color={color}>
               Dr. Stone
             </CustomLink>
             ,{' '}
-            <CustomLink href={links.jujutsu} color={orange}>
+            <CustomLink href={links.jujutsu} color={color}>
               Jujutsu Kaisen
             </CustomLink>{' '}
             and{' '}
-            <CustomLink href={links.owari} color={orange}>
+            <CustomLink href={links.owari} color={color}>
               Owari no Seraph
             </CustomLink>
             .
@@ -71,7 +70,7 @@ export const About = () => {
       </Box>
       <Box display="flex" justifyContent="center" w={{ base: '80%', lg: '40%' }} py="20" ml="2%">
         <Box w={{ base: '80%', lg: '100%' }}>
-          <Box bg={orange} _hover={{ bg: 'transparent' }} transition="0.5s ease">
+          <Box bg={color} _hover={{ bg: 'transparent' }} transition="0.5s ease">
             <Image src="/profile.jpg" alt="profile" w="100%" objectFit="cover" opacity={0.8} />
           </Box>
         </Box>

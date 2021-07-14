@@ -2,11 +2,10 @@ import { Stack, Grid, Flex, Text, Icon, Spacer, Link } from '@chakra-ui/react';
 import { FiFolder, FiGithub } from 'react-icons/fi';
 import { Title } from './Title';
 
-export const Projects = () => {
-  const orange = '#EDBC41';
+export const Projects = ({ color }) => {
   return (
     <Stack id="projects" w={{ base: '80%', lg: 900, xl: 1100 }} minH="50vh" color="#fff" pt="6vh">
-      <Title index={3} text="Projects" w="60%" mb="8" />
+      <Title index={3} text="Projects" color={color} w="60%" mb="8" />
       <Grid templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }} gap={6}>
         {projects.map(({ id, title, description, github, website, inProgress, technologies }) => (
           <Link
@@ -28,9 +27,9 @@ export const Projects = () => {
               borderRadius="10px"
             >
               <Flex alignItems="center">
-                <Icon as={FiFolder} fontSize="xx-large" color={orange} />
+                <Icon as={FiFolder} fontSize="xx-large" color={color} />
                 <Spacer />
-                <Icon as={FiGithub} fontSize="x-large" _hover={{ color: orange }} />
+                <Icon as={FiGithub} fontSize="x-large" _hover={{ color: color }} />
               </Flex>
               <Flex direction="column" h="100%" py="3">
                 <Flex direction="row" alignItems="center" mb="3">

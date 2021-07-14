@@ -1,8 +1,7 @@
 import { Link, IconButton } from '@chakra-ui/react';
 
-export const IconButtonLink = ({ href, ...rest }) => {
+export const IconButtonLink = ({ href, color, ...rest }) => {
   const iconSize = 22;
-  const orange = '#EDBC41';
   return (
     <Link href={href} isExternal>
       <IconButton
@@ -10,7 +9,7 @@ export const IconButtonLink = ({ href, ...rest }) => {
         fontSize={iconSize}
         bg="transparent"
         mb="1"
-        _hover={{ bg: 'transparent', color: orange }}
+        _hover={{ bg: 'transparent', color: color }}
         {...rest}
       />
     </Link>

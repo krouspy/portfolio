@@ -3,12 +3,12 @@ import { FiGithub, FiTwitter, FiLinkedin } from 'react-icons/fi';
 import { AiOutlineMail } from 'react-icons/ai';
 import { IconButtonLink } from './IconButtonLink';
 
-export const LeftSidebar = () => {
+export const LeftSidebar = ({ color }) => {
   return (
     <Flex pos="fixed" direction="column" h="27%" align="center" bottom="0" left="2%" zIndex="1">
       <Flex flexDirection="column">
         {data.map(({ id, href, ariaLabel, icon }) => (
-          <IconButtonLink key={id} href={href} aria-label={ariaLabel} icon={icon} />
+          <IconButtonLink key={id} href={href} color={color} aria-label={ariaLabel} icon={icon} />
         ))}
       </Flex>
       <Box flex="1" h="40%">
