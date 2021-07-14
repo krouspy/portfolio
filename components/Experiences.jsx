@@ -55,9 +55,9 @@ export const Experiences = () => {
           <Box w="100%">
             <Stack>
               <Text fontSize="lg">
-                {job.title + ' '}
+                {job.title + ' '} <span style={{ color: orange }}>@</span>
                 <CustomLink href={job.company.href} color={orange}>
-                  {'@' + job.company.name}
+                  {job.company.name}
                 </CustomLink>
               </Text>
               <Text color="#818BA9">{job.timeframe}</Text>
