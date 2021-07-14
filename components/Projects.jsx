@@ -65,7 +65,7 @@ const projects = [
     id: 0,
     title: 'Portfolio',
     description: 'First version of my personal website built with Next.js and hosted on Vercel',
-    inProgress: true,
+    inProgress: false,
     github: 'https://github.com/krouspy/portfolio',
     technologies: ['Next.js', 'Vercel', 'Chakra UI'],
   },
