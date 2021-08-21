@@ -62,19 +62,19 @@ export const Projects = ({ color }) => {
 const projects = [
   {
     id: 0,
+    title: 'Schedular Multisig',
+    description: 'Upgradeable contract behind a Multisig contract on Acala',
+    inProgress: false,
+    github: 'https://github.com/krouspy/schedular-multisig',
+    technologies: ['Solidity', 'Hardhat', 'Acala'],
+  },
+  {
+    id: 1,
     title: 'Portfolio',
     description: 'First version of my personal website built with Next.js and hosted on Vercel',
     inProgress: false,
     github: 'https://github.com/krouspy/portfolio',
     technologies: ['Next.js', 'Vercel', 'Chakra UI'],
-  },
-  {
-    id: 1,
-    title: 'Loom',
-    description: 'Collaborative platform to organize roadtrips. Currently exploring Firebase',
-    inProgress: true,
-    github: 'https://github.com/krouspy/loom',
-    technologies: ['Next.js', 'Firebase', 'Chakra UI'],
   },
   {
     id: 2,
