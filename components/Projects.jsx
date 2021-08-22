@@ -78,11 +78,11 @@ const projects = [
   },
   {
     id: 2,
-    title: 'Lunary',
-    description: 'NFT marketplace built on The Graph, similar to OpenSea',
-    inProgress: true,
-    github: 'https://github.com/krouspy/lunary',
-    technologies: ['The Graph', 'React', 'Solidity'],
+    title: 'Colloc-Chain',
+    description: 'Collocation platform built on a Hyperledger Besu private blockchain',
+    inProgress: false,
+    github: 'https://github.com/colloc-chain',
+    technologies: ['Solidity', 'Node.js', 'Mongo'],
   },
   {
     id: 3,
