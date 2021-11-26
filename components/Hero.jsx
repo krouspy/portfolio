@@ -9,23 +9,23 @@ export const Hero = ({ color }) => {
       h="100vh"
       w="100%"
       fontFamily="HindMadurai"
-      pl={{ base: '10%', lg: '20%' }}
+      pl={{ base: '15%', lg: '20%' }}
     >
       <Box
         pos="absolute"
         zIndex={1}
-        w={{ base: '100%', lg: '70%' }}
+        w={{ base: '90%', lg: '70%' }}
         h="100%"
-        pt="12%"
+        pt={{ base: '30%', md: '25%', lg: '12%' }}
         color="white"
       >
         <Heading as="h1" fontSize="lg" mb="3" color={color}>
           Hello, my name is
         </Heading>
-        <Heading as="h1" fontSize="6xl" mb="3">
+        <Heading as="h1" fontSize={{ base: '4xl', md: '6xl' }} mb="3">
           Kenji LAU
         </Heading>
-        <Heading as="h2" fontSize="6xl" color="#A2A3C3" mb="3">
+        <Heading as="h2" fontSize={{ base: '4xl', md: '6xl' }} color="#A2A3C3" mb="3">
           I&apos;m a Blockchain Developer.
         </Heading>
         <Text fontSize="larger" width="90%" color="#A2A3C3">
@@ -55,7 +55,7 @@ export const Hero = ({ color }) => {
         zIndex={0}
         w={{ base: '100%', lg: '30%' }}
         h="100%"
-        pt="5%"
+        pt={{ md: '15%', lg: '10%', xl: '5%' }}
         left="55%"
       >
         <Bitcoin color={color} />

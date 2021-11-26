@@ -16,7 +16,7 @@ export const About = ({ color }) => {
   return (
     <Flex
       id="about"
-      w={{ base: '80%', md: 700, lg: 850, xl: 1000 }}
+      w={{ base: '70%', md: 700, lg: 800, xl: 1000 }}
       minH="80vh"
       direction={{ base: 'column', lg: 'row' }}
       pt="20"

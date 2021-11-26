@@ -4,9 +4,12 @@ import { Title } from './Title';
 
 export const Projects = ({ color }) => {
   return (
-    <Stack id="projects" w={{ base: '80%', lg: 900, xl: 1100 }} minH="50vh" color="#fff" pt="6vh">
+    <Stack id="projects" w={{ base: '65%', lg: 800, xl: 1100 }} minH="50vh" color="#fff" pt="6vh">
       <Title index={3} text="Projects" color={color} w="60%" mb="8" />
-      <Grid templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }} gap={6}>
+      <Grid
+        templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }}
+        gap={6}
+      >
         {projects.map(({ id, title, description, github, website, inProgress, technologies }) => (
           <Link
             key={id}
@@ -19,7 +22,7 @@ export const Projects = ({ color }) => {
             <Stack
               bg="#112341"
               w="100%"
-              h="300"
+              h={{ base: '270', md: '300' }}
               px="4"
               pt="3"
               pb="2"

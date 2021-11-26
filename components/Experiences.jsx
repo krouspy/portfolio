@@ -19,10 +19,10 @@ export const Experiences = ({ color }) => {
   };
 
   return (
-    <Stack id="jobs" w={{ base: '100%', lg: '80%', xl: '60%' }} minH="50vh" mb="20" pt="6vh">
+    <Stack id="jobs" w={{ base: '80%', lg: '90%', xl: '60%' }} minH="50vh" mb="20" pt="6vh">
       <Box w="70%" ml="10%">
         <Title index={2} text="Where I've worked" color={color} />
-        <Stack color="white" direction="row" spacing={10}>
+        <Stack color="white" direction={{ base: 'column', md: 'row' }} spacing={10}>
           <ButtonGroup
             height="100%"
             variant="ghost"
