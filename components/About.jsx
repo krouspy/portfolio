@@ -27,11 +27,11 @@ export const About = ({ color }) => {
           <Text fontSize="lg" mb="5">
             Hi there! My name is Kenji and I&apos;m from Tahiti, French Polynesia.
             <br />
-            Currently, I&apos;m completing my{' '}
+            I recently graduated with a {' '}
             <CustomLink href={links.esilv} color={color}>
-              Master 2 Fintech program{' '}
+              Master in Financial Engineering{' '}
             </CustomLink>{' '}
-            at ESILV, an engineering school in Paris. I discovered cryptocurrencies in 2018,
+            from ESILV, an engineering school in Paris. I discovered cryptocurrencies in 2018,
             starting with Bitcoin then overtime, more I learned about it, I understood the benefits
             of this technology and the importance to build around it.
           </Text>
@@ -45,7 +45,7 @@ export const About = ({ color }) => {
               Banking company
             </CustomLink>
             . My goal is to keep learning everyday and build things around DeFi and NFTs while
-            exploring other ecosystems such as Polkadot, Polygon, Solana and Cardano.
+            exploring other ecosystems such as Polkadot, Solana as well as Layer 2 technologies.
           </Text>
           <Text fontSize="lg" mb="5">
             Aside from that, I really enjoy video games like{' '}

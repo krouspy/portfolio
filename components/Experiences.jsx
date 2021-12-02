@@ -83,7 +83,7 @@ const jobs = [
       name: 'Wakam',
       href: 'https://www.wakam.com/en/',
     },
-    timeframe: 'October 2019 - Present',
+    timeframe: 'October 2019 - August 2021',
     description: [
       {
         id: 0,
@@ -96,7 +96,7 @@ const jobs = [
       {
         id: 2,
         content:
-          'Work with a variety of languages, platforms and frameworks such as Solidity, React, Typescript, Azure, C# and Docker',
+          'Work with a variety of languages, platforms and frameworks such as Solidity, React, Node.js, Typescript, Azure, C# and Docker',
       },
       {
         id: 3,
